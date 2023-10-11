@@ -103,25 +103,27 @@ p {
   }
 }
 
-.project {
-  display: flex;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 100%));
 }
 
 .project-card {
   text-align: center;
   color: var(--main-color);
   margin: 20px 0px;
+  transition: 300ms;
+
+}
+
+.project-card:hover {
+  transform: scale(0.95);
 }
 
 .project-image {
   width: 50%;
   border: 3px solid var(--blue);
   border-radius: 10px;
-  transition: 300ms;
-}
-
-.project-image:hover {
-  transform: scale(0.9);
 }
 
 .social-icons .fa-brands {
@@ -169,6 +171,10 @@ p {
 
 .social-icons .fa-twitter {
   background-color: #1da1f3;
+}
+
+.social-icons .fa-github {
+  background-color: #333;
 }
 
 .list-unstyled {
