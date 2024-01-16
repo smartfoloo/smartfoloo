@@ -43,9 +43,8 @@ h2 {
 }
 
 h3 {
-  font-size: 38px;
-  margin: 0;
-  line-height: 2;
+  font-size: 24px;
+  margin: 10px 0px;
 }
 
 h4 {
@@ -57,7 +56,7 @@ h4 {
 
 h5 {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   margin: 0px 0px 24px 0px;
   padding: 0;
 }
@@ -106,7 +105,7 @@ p {
 .project-card {
   text-align: center;
   color: var(--main-color);
-  width: 400px;
+  width: 300px;
   transition: 300ms;
   border: 3px solid var(--blue);
   border-radius: 20px;
@@ -114,11 +113,11 @@ p {
 }
 
 .project-card h4 {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .project-card:hover {
-  transform: scale(0.95);
+  transform: translateY(-5px);
 }
 
 .project-image {
