@@ -25,6 +25,12 @@ a {
   text-decoration: none;
 }
 
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .content {
   margin: 20px 200px;
 }
@@ -77,6 +83,12 @@ p {
   padding: 30px;
   margin: 20px 0px;
   box-shadow: 5px 5px 5px #242424, -5px -5px 5px #2C2C2C;
+}
+
+.account-logo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 
 
