@@ -1,20 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --main-color: #fbf1c7;
-  --blue: #458588;
-  --aqua: #689d6a;
-  --orange: #d65d0e;
+  --background: #1e1e2e;
+  --background2: #313244;
+  --background3: #45475a;
+  --background4: #6c7086;
+  --main-color: #cdd6f4;
+  --shadow: rgba(108, 112, 134, 0.5);
+  --blue: #89b4fa;
+  --aqua: #a6e3a1;
+  --orange: #fab387;
+  --background-light: #928374;
 }
 
 body {
   font-family: 'Montserrat';
   font-weight: 300;
-  background: #282828;
+  background: #1e1e2e;
   background-size: cover;
   background-attachment: fixed;
   color: var(--main-color);
@@ -49,22 +55,30 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 30px;
   margin: 10px 0px;
+  font-weight: 600;
 }
 
 h4 {
   font-weight: 300;
-  font-size: 30px;
+  font-size: 25px;
   margin: 0;
   padding: 0;
 }
 
 h5 {
-  font-weight: 400;
-  font-size: 18px;
-  margin: 0px 0px 24px 0px;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px 0px;
   padding: 0;
+  line-height: 2;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0px;
 }
 
 p {
@@ -79,10 +93,10 @@ p {
 
 .box {
   border-radius: 20px;
-  background: #3c3836;
+  background: var(--background3);
   padding: 30px;
   margin: 20px 0px;
-  box-shadow: 5px 5px 5px #242424, -5px -5px 5px #2C2C2C;
+  box-shadow: 0px 0px 5px 5px var(--shadow);
 }
 
 .account-logo {
@@ -111,30 +125,21 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
 }
 
 .project-card {
   text-align: center;
   color: var(--main-color);
+  background: var(--background4);
   width: 300px;
   transition: 300ms;
-  border: 3px solid var(--blue);
-  border-radius: 20px;
-  padding: 20px;
-}
-
-.project-card h4 {
-  font-size: 14px;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
+  border-radius: 23px;
+  padding: 15px;
 }
 
 .project-image {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .social-icons .fa-brands {
@@ -225,6 +230,42 @@ option {
   padding: 5px;
 }
 
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.skill {
+  width: calc(25% - 22.5px);
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 5px 0px;
+}
+
+.skill-bar {
+  height: 20px;
+  background-color: var(--background2);
+  border-radius: 10px;
+  position: relative;
+}
+
+.skill-bar-filled {
+  height: 100%;
+  background-color: var(--blue);
+  border-radius: inherit;
+}
+
 @media screen and (max-width: 1000px) {
   .content {
     margin: 20px 70px;
@@ -240,5 +281,11 @@ option {
 
   .project-card {
     width: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .skill {
+    width: calc(50% - 45px);
   }
 }
