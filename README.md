@@ -8,7 +8,7 @@
   os: mac;
   browser: chrome;
   code-editor: vscode;
-  current-project: music-player;
+  current-project: arsenic, lunarsync;
 }
 
 .smxrtfoloo .socials {
