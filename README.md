@@ -1,4 +1,4 @@
-<h1>Hi 👋, I'm Smxrtfoloo</h1>
+<h1>Hi 👋, I'm smxrtfoloo</h1>
 <h3>The random person grinding code</h3>
 
 ```css
