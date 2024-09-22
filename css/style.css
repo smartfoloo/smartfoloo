@@ -5,10 +5,10 @@
 }
 
 :root {
-  --background: #1e1e2e;
-  --background2: #313244;
-  --background3: #45475a;
-  --background4: #6c7086;
+  --background: #11111b;
+  --background2: #1e1e2e;
+  --background3: #313244;
+  --background4: #585b70;
   --main-color: #cdd6f4;
   --shadow: rgba(108, 112, 134, 0.5);
   --blue: #89b4fa;
@@ -20,7 +20,7 @@
 body {
   font-family: 'Montserrat';
   font-weight: 300;
-  background: #1e1e2e;
+  background: var(--background);
   background-size: cover;
   background-attachment: fixed;
   color: var(--main-color);
@@ -56,8 +56,8 @@ h2 {
 
 h3 {
   font-size: 25px;
-  margin: 10px 0px;
   font-weight: 600;
+  margin: 0px;
 }
 
 h4 {
@@ -93,10 +93,9 @@ p {
 
 .box {
   border-radius: 20px;
-  background: var(--background3);
+  background: var(--background2);
   padding: 30px;
   margin: 20px 0px;
-  box-shadow: 0px 0px 5px 5px var(--shadow);
 }
 
 .account-logo {
@@ -127,13 +126,17 @@ p {
 }
 
 .project-card {
-  text-align: center;
+  text-align: left;
   color: var(--main-color);
-  background: var(--background4);
+  background: var(--background3);
   width: 100%;
-  transition: 300ms;
+  transition: 200ms;
   border-radius: 23px;
   padding: 15px;
+}
+
+.project-card:hover {
+  transform: scale(0.98);
 }
 
 .project-image {
@@ -205,12 +208,13 @@ p {
 }
 
 select {
-  background: var(--blue);
-  font-family: 'Montserrat';
+  background: var(--background3);
+  font-family: 'Montserrat' !important;
   color: var(--main-color);
   border-radius: 5px;
   padding: 5px;
   outline: none;
+  border: none;
   transition: 300ms;
 }
 
@@ -253,7 +257,7 @@ option {
 
 .skill-bar {
   height: 20px;
-  background-color: var(--background2);
+  background-color: var(--background);
   border-radius: 10px;
   position: relative;
 }
@@ -280,7 +284,7 @@ option {
 
 @media screen and (max-width: 800px) {
   .skill {
-    width: calc(50% - 45px);
+    width: calc(50% - 40px);
   }
 
   h1 {
@@ -299,5 +303,11 @@ option {
 
   .projects {
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skill {
+    width: calc(100% - 40px);
   }
 }
