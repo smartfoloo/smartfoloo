@@ -122,7 +122,12 @@ p {
 
 .projects {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.projects a {
+  width: calc(33.33% - 10px);
 }
 
 .project-card {
