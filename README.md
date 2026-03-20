@@ -1,21 +1,17 @@
-<h1>Hi 👋, I'm smxrtfoloo</h1>
-<h3>The random person grinding code</h3>
+<div align="right">
+  <img src="https://komarev.com/ghpvc/?username=smartfoloo" />
+</div>
 
-```css
-.smxrtfoloo {
-  hobbies: tennis code gaming;
-  languages: html css js python;
-  os: mac;
-  browser: chrome;
-  code-editor: vscode;
-  current-project: arsenic, lunarsync;
-}
+## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> Hello
 
-.smxrtfoloo .socials {
-  twitter: @smartfoloo;
-  discord: @smartfoloo;
-  youtube: @smartfoloo;
-  email: smartfoloo@gmail.com;
-  phone-number: 1234567890;
-}
-```
+- I'm a web developer.
+
+## 🌱 Skills
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=7&i=html,css,js,go,docker," />
+<br>
+
+## 🏃‍♀️ Activities
+<div align="left"> 
+  <img alt="Top Langs" height="170px" src="https://github-readme-stats.vercel.app/api?username=smartfoloo&theme=vue-dark&layout=compact" />
+  <img alt="github stats" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=smartfoloo&theme=vue-dark&layout=compact" />
+</div>
