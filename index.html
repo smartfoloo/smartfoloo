@@ -3,23 +3,97 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>smxrtfoloo</title>
+    <title>smartfoloo</title>
     <link rel="icon" type="image/xcon" href="images/pfp.png">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/animation.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   </head>
   <body>
     <div class="content">
-      <div id="MyClockDisplay" class="clock hidden" onload="showTime()"></div>
+      <div class="floating-bar">
+        <div class="lang-bar">
+          <button class="lang-btn active" data-lang="EN">EN</button>
+          <button class="lang-btn" data-lang="JP">JP</button>
+        </div>
+        <a href="https://instagram.com/smartfoloo" target="_blank" class="social-float instagram" title="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://x.com/smartfoloo" target="_blank" class="social-float x-icon" title="X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="https://github.com/smartfoloo" target="_blank" class="social-float github" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
       <div class="main hidden">
-        <h1>Hello!</h1>
         <img src="/images/pfp.png" alt="" class="account-logo">
+        <h1>smartfoloo</h1>
+        <div class="bio" data-lang="EN|JP">
+          <h4 data-lang="EN|JP">
+            <span class="en-text">Web Developer & Student</span>
+            <span class="jp-text">Webデベロッパー | 学生</span>
+          </h4>
+          <div class="geo">
+            <h4 class="location" data-lang="EN|JP">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span class="en-text">Tokyo</span>
+              <span class="jp-text">東京</span>
+            </h4>
+            <div class="time-container">
+              <i class="bi bi-clock-history"></i>
+              <div class="time-display" id="time"></div>
+              <div class="timezone-label" id="label">(UTC+09:00)</div>
+            </div>
+          </div>
+          <h4 data-lang="EN|JP">
+            <span class="en-text">Been in web development since 2022. Follow me!</span>
+            <span class="jp-text">2022年よりWeb開発を勉強しています。</span>
+          </h4>
+        </div>
       </div>
       <div class="box hidden">
-        <h2>About Me</h2>
-        <h4>Hello! I am a web developer and student currently living in Texas. I started coding when I was like 10 (honestly idk), and I've been absoloutely grinding since then (lol). I like gaming, web development, and playing tennis in my freetime!</h4>
+        <h2>Projects</h2>
+        <div class="projects hidden">
+          <div class="project-card hidden">
+            <div class="project-left">
+              <img class="project-image" src="/images/arsenic.png">
+            </div>
+            <div class="project-right">
+              <h3>Arsenic</h3>
+              <h6 data-lang="EN|JP">
+                <span class="en-text">A privacy focused, feature rich, web proxy built in Node.js.</span>
+                <span class="jp-text">Arsenicは機能豊富なWebプロキシです。</span>
+              </h6>
+            </div>
+          </div>
+          <div class="project-card hidden">
+            <div class="project-left">
+              <img class="project-image" src="/images/filterchecker.png">
+            </div>
+            <div class="project-right">
+              <h3>Filter Checker</h3>
+              <h6 data-lang="EN|JP">
+                <span class="en-text">An URL checker for content filters used in schools and workplaces. Supports Lightspeed and FortiGuard.</span>
+                <span class="jp-text">フィルターチェッカーは学校や職場で使用されるコンテンツフィルターのURLチェッカーです。LightspeedとFortiGuardに対応しています。</span>
+              </h6>
+            </div>
+          </div>
+          <div class="project-card hidden">
+            <div class="project-left">
+              <img class="project-image" src="/images/reprice.png">
+            </div>
+            <div class="project-right">
+              <h3>Reprice</h3>
+              <h6 data-lang="EN|JP">
+                <span class="en-text">A Chrome extension that displays the fair price of used apartments on major real estate portal sites in Japan.</span>
+                <span class="jp-text">Repriceは、大手不動産ポータルサイトで中古マンションの適正価格を表示することができるChrome拡張機能です。</span>
+              </h6>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="box hidden">
         <h2>Skills</h2>
@@ -104,66 +178,6 @@
               <div class="skill-bar-filled"></div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="box hidden">
-        <h2>Projects</h2>
-        <div class="projects hidden">
-          <a href="https://arsenic.smartfoloo.space/" target="_blank">
-            <div class="project-card hidden">
-              <h3>arsenic</h3>
-              <h6>A beautiful online gaming website built with experience in mind.</h6>
-              <img class="project-image" src="/images/arsenic.png">
-            </div>
-          </a>
-          <a href="https://lunarsync.smartfoloo.space/" target="_blank">
-            <div class="project-card hidden">
-              <h3>lunarsync</h3>
-              <h6>An ultrafast, yet simple web proxy to unblock all of your favorites.</h6>
-              <img class="project-image" src="/images/lunarsync.png">
-            </div>
-          </a>
-          <a href="https://moonlight.silvereen.net/" target="_blank">
-            <div class="project-card hidden">
-              <h3>moonlight</h3>
-              <h6>The cure to boredom at your fingertips.</h6>
-              <img class="project-image" src="/images/moonlight.png">
-            </div>
-          </a>
-          <a href="https://monkeunblocker.com/" target="_blank">
-            <div class="project-card hidden">
-              <h3>monke unblocker</h3>
-              <h6>The #1 web proxy for unblocking websites and games at school!</h6>
-              <img class="project-image" src="/images/monkeunblocker.png">
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="box hidden">
-        <h2>Contact Me</h2>
-        <div class="social">
-          <ul class="social-icons icon-circle icon-rotate list-unstyled list-inline">
-            <li>
-              <a href="https://discord.com/users/926711054602473552" target="_blank">
-                <i class="fa-brands fa-discord"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@smartfoloo" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/smartfoloo" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/smartfoloo" target="_blank">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
