@@ -12,6 +12,5 @@
 
 ## 🏃‍♀️ Activities
 <div align="left"> 
-  <img alt="Top Langs" height="170px" src="https://github-readme-stats.vercel.app/api?username=smartfoloo&theme=vue-dark&layout=compact" />
-  <img alt="github stats" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=smartfoloo&theme=vue-dark&layout=compact" />
+[![GitHub Streak](https://streak-stats.demolab.com?user=smartfoloo&theme=catppuccin-mocha&hide_border=true&border_radius=10)](https://git.io/streak-stats)
 </div>
