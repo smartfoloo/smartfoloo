@@ -12,5 +12,5 @@
 
 ## 🏃‍♀️ Activities
 <div align="left"> 
-[![GitHub Streak](https://streak-stats.demolab.com?user=smartfoloo&theme=catppuccin-mocha&hide_border=true&border_radius=10)](https://git.io/streak-stats)
+<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=smartfoloo&theme=catppuccin-mocha&hide_border=true&border_radius=10" alt="GitHub Streak" /></a>
 </div>

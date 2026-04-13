@@ -249,7 +249,7 @@ p {
 
 .projects {
   display: flex;
-  gap: 30px;
+  gap: 75px;
   flex-wrap: wrap;
 }
 
