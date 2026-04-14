@@ -57,15 +57,15 @@ function applyLanguage(lang) {
       element.classList.add('hidden-lang');
     }
 
-    if (element.querySelector('.jp-text, .en-text')) {
-      const jpText = element.querySelector('.jp-text');
+    if (element.querySelector('.JA-text, .en-text')) {
+      const JAText = element.querySelector('.JA-text');
       const enText = element.querySelector('.en-text');
 
-      if (lang === 'JP' && jpText) {
-        jpText.style.display = 'inline';
+      if (lang === 'JA' && JAText) {
+        JAText.style.display = 'inline';
         if (enText) enText.style.display = 'none';
       } else {
-        if (jpText) jpText.style.display = 'none';
+        if (JAText) JAText.style.display = 'none';
         if (enText) enText.style.display = 'inline';
       }
     }

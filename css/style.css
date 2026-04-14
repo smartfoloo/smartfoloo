@@ -173,12 +173,12 @@ p {
 }
 
 [data-lang] .en-text,
-[data-lang] .jp-text {
+[data-lang] .JA-text {
   display: none;
 }
 
 [data-lang] .en-text.active-lang,
-[data-lang] .jp-text.active-lang {
+[data-lang] .JA-text.active-lang {
   display: inline;
 }
 
