@@ -12,271 +12,246 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   </head>
   <body>
-    <div class="content">
-      <div class="floating-bar">
-        <div class="lang-bar">
-          <button class="lang-btn active" data-lang="EN">EN</button>
-          <button class="lang-btn" data-lang="JA">JA</button>
-        </div>
-        <a href="https://instagram.com/smartfoloo" target="_blank" class="social-float instagram" title="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://x.com/smartfoloo" target="_blank" class="social-float x-icon" title="X">
-          <i class="bi bi-twitter-x"></i>
-        </a>
-        <a href="https://github.com/smartfoloo" target="_blank" class="social-float github" title="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
+    <nav>
+      <div class="nav-links">
+        <a href="#projects"><span class="en">Projects</span><span class="ja">作品</span></a>
+        <a href="#skills"><span class="en">Skills</span><span class="ja">スキル</span></a>
       </div>
-      <div class="main hidden">
-        <img src="/images/pfp.png" alt="" class="account-logo">
-        <h1>smartfoloo</h1>
-        <div class="bio" data-lang="EN|JA">
-          <h4 data-lang="EN|JA">
-            <span class="en-text">Web Developer & Student</span>
-            <span class="JA-text">Webデベロッパー | 学生</span>
-          </h4>
-          <div class="geo">
-            <h4 class="location" data-lang="EN|JA">
+      <div class="nav-sep"></div>
+      <div class="nav-social">
+        <a href="https://instagram.com/smartfoloo" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://x.com/smartfoloo" target="_blank" title="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://github.com/smartfoloo" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+      </div>
+      <div class="nav-sep"></div>
+      <div class="lang-pill">
+        <div class="lang-indicator"></div>
+        <button class="lang-btn active" data-lang="EN">EN</button>
+        <button class="lang-btn" data-lang="JA">JP</button>
+      </div>
+    </nav>
+    <main>
+      <div class="hero">
+        <img src="/images/pfp.png" alt="smartfoloo avatar" class="hero-avatar">
+        <div class="hero-text">
+          <h1 class="hero-name">smartfoloo</h1>
+          <p class="hero-role">
+            <span class="en">Web Developer &amp; Student</span>
+            <span class="ja">Web Developer &amp; Student</span>
+          </p>
+          <p class="hero-bio">
+            <span class="en">Building things on the web since 2022.</span>
+            <span class="ja">2022年より個人開発をしています。たまに実用的なツールを作ってます。金欠なのでClaude CodeやCursorは使ってません。</span>
+          </p>
+          <div class="hero-meta">
+            <div class="meta-chip">
               <i class="bi bi-geo-alt-fill"></i>
-              <span class="en-text">Tokyo</span>
-              <span class="JA-text">東京</span>
-            </h4>
-            <div class="time-container">
-              <i class="bi bi-clock-history"></i>
-              <div class="time-display" id="time"></div>
-              <div class="timezone-label" id="label">(UTC+09:00)</div>
+              <span class="en">Tokyo, Japan</span><span class="ja">東京</span>
             </div>
-          </div>
-          <h4 data-lang="EN|JA">
-            <span class="en-text">Been in web development since 2022. Follow me!</span>
-            <span class="JA-text">2022年よりWeb開発を勉強しています。</span>
-          </h4>
-        </div>
-      </div>
-      <div class="box hidden">
-        <h2>Projects</h2>
-        <div class="projects hidden">
-          <div class="project-card hidden">
-            <div class="project-left">
-              <img class="project-image" src="/images/arsenic.png">
+            <div class="meta-chip">
+              <div class="status-dot"></div>
+              <span id="clock">--:--:--</span>
+              <span style="color:var(--bg4); font-size:12px;">JST</span>
             </div>
-            <div class="project-right">
-              <h3>Arsenic</h3>
-              <h6 data-lang="EN|JA">
-                <span class="en-text">A privacy focused, feature rich, web proxy built in Node.js with over 8 million views.</span>
-                <span class="JA-text">Arsenicは総アクセス数800万回を突破した機能豊富なWebプロキシです。</span>
-              </h6>
-              <a href="https://arsenic.smartfoloo.space" target="_blank" class="project-link">
-                <button class="project-button">
-                  <h6 data-lang="EN|JA">
-                    <span class="en-text">View</span>
-                    <span class="JA-text">開く</span>
-                  </h6>
-                  <i class="bi bi-arrow-up-right"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="project-card hidden">
-            <div class="project-left">
-              <img class="project-image" src="/images/reprice.png">
-            </div>
-            <div class="project-right">
-              <h3>Reprice</h3>
-              <h6 data-lang="EN|JA">
-                <span class="en-text">A Chrome extension that displays the market price of used apartments on major real estate portal sites in Japan. </span>
-                <span class="JA-text">Repriceは大手不動産ポータルサイトで中古物件の相場価格を表示することができるChrome拡張機能です。</span>
-              </h6>
-              <a href="https://github.com/smartfoloo/reprice" target="_blank" class="project-link">
-                <button class="project-button">
-                  <h6 data-lang="EN|JA">
-                    <span class="en-text">View on GitHub</span>
-                    <span class="JA-text">GitHubで見る</span>
-                  </h6>
-                  <i class="bi bi-arrow-up-right"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="project-card hidden">
-            <div class="project-left">
-              <img class="project-image" src="/images/filterchecker.png">
-            </div>
-            <div class="project-right">
-              <h3>Filter Checker</h3>
-              <h6 data-lang="EN|JA">
-                <span class="en-text">An URL checker for content filters used in schools and workplaces. Supports Lightspeed and FortiGuard.</span>
-                <span class="JA-text">フィルターチェッカーは学校や職場で使用されるコンテンツフィルターのURLチェッカーです。LightspeedとFortiGuardに対応しています。</span>
-              </h6>
-              <a href="https://github.com/smartfoloo/filter-checker" target="_blank" class="project-link">
-                <button class="project-button">
-                  <h6 data-lang="EN|JA">
-                    <span class="en-text">View on GitHub</span>
-                    <span class="JA-text">GitHubで見る</span>
-                  </h6>
-                  <i class="bi bi-arrow-up-right"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="project-card hidden">
-            <div class="project-left">
-              <img class="project-image" src="/images/imagetogeojson.png">
-            </div>
-            <div class="project-right">
-              <h3>Image to GeoJSON</h3>
-              <h6 data-lang="EN|JA">
-                <span class="en-text">Turn any image into georeferenced GeoJSON by placing control points, assigning lat/lon coordinates, and exporting the result.</span>
-                <span class="JA-text">任意の画像を、コントロールポイントを配置して緯度・経度を割り当てることでジオリファレンスし、その結果をGeoJSONとして出力できます。</span>
-              </h6>
-              <a href="https://image-to-geojson.pages.dev/" target="_blank" class="project-link">
-                <button class="project-button">
-                  <h6 data-lang="EN|JA">
-                    <span class="en-text">View</span>
-                    <span class="JA-text">開く</span>
-                  </h6>
-                  <i class="bi bi-arrow-up-right"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="project-card hidden">
-            <div class="project-left">
-              <img class="project-image" src="/images/chromehistoryspammer.png">
-            </div>
-            <div class="project-right">
-              <h3>Chrome History Spammer</h3>
-              <h6 data-lang="EN|JA">
-                <span class="en-text">A tool for spamming Chrome history entries, so your activity won't easily be discovered.</span>
-                <span class="JA-text">Chromeの履歴にサイトを大量追加することによって、昔の履歴を隠すことができるツールです。</span>
-              </h6>
-              <a href="https://chrome-history-spammer.pages.dev/" target="_blank" class="project-link">
-                <button class="project-button">
-                  <h6 data-lang="EN|JA">
-                    <span class="en-text">View</span>
-                    <span class="JA-text">開く</span>
-                  </h6>
-                  <i class="bi bi-arrow-up-right"></i>
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="project-card hidden">
-            <div class="project-left">
-              <img class="project-image" src="/images/harlinkextractor.png">
-            </div>
-            <div class="project-right">
-              <h3>HAR Link Extractor</h3>
-              <h6 data-lang="EN|JA">
-                <span class="en-text">A tool for extracting links from HAR files.</span>
-                <span class="JA-text">HARファイルからリンクを抽出するためのツールです。</span>
-              </h6>
-              <a href="https://github.com/smartfoloo/har-link-extractor" target="_blank" class="project-link">
-                <button class="project-button">
-                  <h6 data-lang="EN|JA">
-                    <span class="en-text">View on GitHub</span>
-                    <span class="JA-text">GitHubで見る</span>
-                  </h6>
-                  <i class="bi bi-arrow-up-right"></i>
-                </button>
-              </a>
+            <div class="meta-chip">
+              <i class="bi bi-calendar3"></i>
+              <span class="en">Since 2022</span><span class="ja">2022年〜</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="box hidden">
-        <h2>Skills</h2>
-        <div class="skills">
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-html5-plain"></i>
-              <h5>HTML</h5>
-              <h6>95%</h6>
+      <section id="projects">
+        <p class="section-label"><span class="en">Projects</span><span class="ja">作品</span></p>
+        <div class="bento">
+          <div class="card card-wide project-card">
+            <img class="project-img" src="/images/arsenic.png" alt="Arsenic">
+            <div>
+              <p class="project-title">Arsenic</p>
+              <p class="project-desc">
+                <span class="en">A privacy-focused, feature-rich web proxy built in Node.js with over 8 million
+                  views.</span>
+                <span class="ja">総アクセス数800万回を突破した機能豊富なWebプロキシです。</span>
+              </p>
             </div>
-            <div class="skill-bar" level="95">
-              <div class="skill-bar-filled"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-css3-plain"></i>
-              <h5>CSS</h5>
-              <h6>95%</h6>
-            </div>
-            <div class="skill-bar" level="95">
-              <div class="skill-bar-filled"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-javascript-plain"></i>
-              <h5>Javascript</h5>
-              <h6>60%</h6>
-            </div>
-            <div class="skill-bar" level="60">
-              <div class="skill-bar-filled"></div>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">Node.js</span>
+                <span class="tag">Proxy</span>
+              </div>
+              <a href="https://arsenic.smartfoloo.space" target="_blank" class="btn-link">
+                <span class="en">View</span><span class="ja">開く</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
             </div>
           </div>
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-python-plain"></i>
-              <h5>Python</h5>
-              <h6>60%</h6>
+          <div class="card project-card">
+            <img class="project-img" src="/images/reprice.png" alt="Reprice">
+            <div>
+              <p class="project-title">Reprice</p>
+              <p class="project-desc">
+                <span class="en">Chrome extension showing market prices of used apartments on Japanese real estate
+                  portals.</span>
+                <span class="ja">大手不動産ポータルで中古物件の相場価格を表示するChrome拡張機能。</span>
+              </p>
             </div>
-            <div class="skill-bar" level="60">
-              <div class="skill-bar-filled"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-git-plain"></i>
-              <h5>Git</h5>
-              <h6>70%</h6>
-            </div>
-            <div class="skill-bar" level="70">
-              <div class="skill-bar-filled"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-linux-plain"></i>
-              <h5>Tailwind CSS</h5>
-              <h6>30%</h6>
-            </div>
-            <div class="skill-bar" level="30">
-              <div class="skill-bar-filled"></div>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">Chrome</span>
+                <span class="tag">Japan</span>
+              </div>
+              <a href="https://github.com/smartfoloo/reprice" target="_blank" class="btn-link">
+                <span class="en">GitHub</span><span class="ja">GitHub</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
             </div>
           </div>
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-nodejs-plain"></i>
-              <h5>NodeJS</h5>
-              <h6>40%</h6>
+          <div class="card project-card">
+            <img class="project-img" src="/images/imagetogeojson.png" alt="Image to GeoJSON">
+            <div>
+              <p class="project-title">Image to GeoJSON</p>
+              <p class="project-desc">
+                <span class="en">Georeference any image by placing control points and exporting to GeoJSON.</span>
+                <span class="ja">コントロールポイントを置いて任意の画像をGeoJSONに変換できます。</span>
+              </p>
             </div>
-            <div class="skill-bar" level="40">
-              <div class="skill-bar-filled"></div>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">GIS</span>
+                <span class="tag">Maps</span>
+              </div>
+              <a href="https://image-to-geojson.pages.dev/" target="_blank" class="btn-link">
+                <span class="en">View</span><span class="ja">開く</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
             </div>
           </div>
-          <div class="skill">
-            <div class="skill-title">
-              <i class="devicon-linux-plain"></i>
-              <h5>Linux</h5>
-              <h6>30%</h6>
+          <div class="card project-card">
+            <img class="project-img" src="/images/filterchecker.png" alt="Filter Checker">
+            <div>
+              <p class="project-title">Filter Checker</p>
+              <p class="project-desc">
+                <span class="en">URL checker for content filters (Lightspeed &amp; FortiGuard) used in schools and
+                  workplaces.</span>
+                <span class="ja">学校や職場のコンテンツフィルターを確認できるURLチェッカー。</span>
+              </p>
             </div>
-            <div class="skill-bar" level="30">
-              <div class="skill-bar-filled"></div>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">Tool</span>
+              </div>
+              <a href="https://github.com/smartfoloo/filter-checker" target="_blank" class="btn-link">
+                <span class="en">GitHub</span><span class="ja">GitHub</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Chrome History Spammer -->
+          <div class="card project-card">
+            <img class="project-img" src="/images/chromehistoryspammer.png" alt="Chrome History Spammer">
+            <div>
+              <p class="project-title">Chrome History Spammer</p>
+              <p class="project-desc">
+                <span class="en">Flood Chrome history entries to obscure past browsing activity.</span>
+                <span class="ja">Chromeの履歴を大量追加して過去の履歴を隠せるツール。</span>
+              </p>
+            </div>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">Chrome</span>
+              </div>
+              <a href="https://chrome-history-spammer.pages.dev/" target="_blank" class="btn-link">
+                <span class="en">View</span><span class="ja">開く</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+    
+          <!-- HAR Link Extractor -->
+          <div class="card project-card">
+            <img class="project-img" src="/images/harlinkextractor.png" alt="HAR Link Extractor">
+            <div>
+              <p class="project-title">HAR Link Extractor</p>
+              <p class="project-desc">
+                <span class="en">Extract and browse all links from HAR network trace files.</span>
+                <span class="ja">HARファイルからリンクを一括抽出するツール。</span>
+              </p>
+            </div>
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">DevTools</span>
+              </div>
+              <a href="https://github.com/smartfoloo/har-link-extractor" target="_blank" class="btn-link">
+                <span class="en">GitHub</span><span class="ja">GitHub</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="thank-you">
-        <h3 data-lang="EN|JA">
-          <span class="en-text">Thank you for visiting!</span>
-          <span class="JA-text" style="font-family: 'JP', sans-serif;">ご覧いただきありがとうございます!</span>
-        </h3>
-      </div>
-    </div>
+      </section>
+      <section id="skills">
+        <p class="section-label"><span class="en">Skills</span><span class="ja">スキル</span></p>
+        <div class="bento">
+          <div class="card card-wide">
+            <div class="skills-grid" id="skill-list">
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-html5-plain"
+                    style="color:#e34f26"></i></span><span class="skill-name">HTML</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="95"></div>
+                </div><span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-css3-plain"
+                    style="color:#264de4"></i></span><span class="skill-name">CSS</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="95"></div>
+                </div><span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-javascript-plain"
+                    style="color:#f7df1e"></i></span><span class="skill-name">JavaScript</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="80"></div>
+                </div><span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-python-plain"
+                    style="color:#3776ab"></i></span><span class="skill-name">Python</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="60"></div>
+                </div><span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-git-plain"
+                    style="color:#f05032"></i></span><span class="skill-name">Git</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="95"></div>
+                </div><span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-nodejs-plain"
+                    style="color:#339933"></i></span><span class="skill-name">Node.js</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="70"></div>
+                </div><span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-tailwindcss-plain"
+                    style="color:#06b6d4"></i></span><span class="skill-name">Tailwind</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="30"></div>
+                </div><span class="skill-pct">30%</span>
+              </div>
+              <div class="skill-row"><span class="skill-icon"><i class="devicon-linux-plain"></i></span><span
+                  class="skill-name">Linux</span>
+                <div class="skill-track">
+                  <div class="skill-fill" data-pct="30"></div>
+                </div><span class="skill-pct">30%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="footer-msg">
+          <span class="en">Thank you for stopping by</span>
+          <span class="ja">ご覧いただきありがとうございます！</span>
+        </p>
+      </footer>
     <script src="/js/app.js"></script>
     <script src="/js/scroll.js"></script>
   </body>

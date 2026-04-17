@@ -1,85 +1,68 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const langBtns = document.querySelectorAll('.lang-btn');
-  const savedLang = localStorage.getItem('siteLanguage') || 'EN';
+// clock
+function tick() {
+  const d = new Date();
+  const t = new Date(d.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+  document.getElementById('clock').textContent =
+    [t.getHours(), t.getMinutes(), t.getSeconds()]
+      .map(n => String(n).padStart(2, '0')).join(':');
+}
+tick(); setInterval(tick, 1000);
 
-  langBtns.forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === savedLang);
-  });
+// language
+const root = document.documentElement;
+const indicator = document.querySelector('.lang-indicator');
+const buttons = document.querySelectorAll('.lang-btn');
 
-  applyLanguage(savedLang);
-
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', function () {
-      const newLang = this.dataset.lang;
-
-      langBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-
-      localStorage.setItem('siteLanguage', newLang);
-      applyLanguage(newLang);
-    });
-  });
-});
-
-const skillBars = document.querySelectorAll('.skill-bar');
-
-skillBars.forEach(skillBar => {
-  const level = skillBar.getAttribute('level');
-  const filledBar = skillBar.querySelector('.skill-bar-filled');
-  filledBar.style.width = `${level}%`;
-});
-
-function updateTime() {
-  const now = new Date();
-  const tokyoTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Tokyo" }));
-
-  const hours = tokyoTime.getHours().toString().padStart(2, '0');
-  const minutes = tokyoTime.getMinutes().toString().padStart(2, '0');
-  const seconds = tokyoTime.getSeconds().toString().padStart(2, '0');
-
-  document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+function detectLang() {
+  const l = navigator.language.toLowerCase();
+  return l.startsWith('ja') ? 'JA' : 'EN';
 }
 
-updateTime();
-setInterval(updateTime, 1000);
+const saved = localStorage.getItem('lang') || detectLang();
+setLang(saved, false);
 
-function applyLanguage(lang) {
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.lang === root.getAttribute('data-lang')) return;
+    playWipe(() => setLang(btn.dataset.lang, true));
   });
+});
 
-  document.querySelectorAll('[data-lang]').forEach(element => {
-    const langs = element.getAttribute('data-lang').split('|');
-
-    if (langs.includes(lang)) {
-      element.classList.remove('hidden-lang');
-    } else {
-      element.classList.add('hidden-lang');
-    }
-
-    if (element.querySelector('.JA-text, .en-text')) {
-      const JAText = element.querySelector('.JA-text');
-      const enText = element.querySelector('.en-text');
-
-      if (lang === 'JA' && JAText) {
-        JAText.style.display = 'inline';
-        if (enText) enText.style.display = 'none';
-      } else {
-        if (JAText) JAText.style.display = 'none';
-        if (enText) enText.style.display = 'inline';
-      }
-    }
-  });
+function setLang(lang, animate) {
+  root.setAttribute('data-lang', lang);
+  localStorage.setItem('lang', lang);
+  buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  moveIndicator();
 }
 
-const container = document.querySelector('.scroll-container');
-const scrollRight = document.querySelector('.scrollRight');
-const scrollLeft = document.querySelector('.scrollLeft');
+function moveIndicator() {
+  const active = document.querySelector('.lang-btn.active');
+  const rect = active.getBoundingClientRect();
+  const parent = active.parentElement.getBoundingClientRect();
+  indicator.style.width = rect.width + 'px';
+  indicator.style.transform = `translateX(${rect.left - parent.left}px)`;
+}
 
-scrollLeft.addEventListener('click', function () {
-  container.scrollBy({ left: -300, behavior: 'smooth' });
-});
+window.addEventListener('load', moveIndicator);
+window.addEventListener('resize', moveIndicator);
 
-scrollRight.addEventListener('click', function () {
-  container.scrollBy({ left: 300, behavior: 'smooth' });
-});
+const wipe = document.createElement('div');
+wipe.className = 'page-wipe';
+document.body.appendChild(wipe);
+
+function playWipe(cb) {
+  wipe.classList.add('active');
+  setTimeout(() => cb(), 350);
+  setTimeout(() => wipe.classList.remove('active'), 700);
+}
+// skill bars — animate when visible
+const fills = document.querySelectorAll('.skill-fill');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.width = e.target.dataset.pct + '%';
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+fills.forEach(f => io.observe(f));
