@@ -111,6 +111,7 @@ nav {
   position: absolute;
   top: 3px;
   bottom: 3px;
+  left: 0;
   width: 0;
   border-radius: 999px;
   background: var(--bg4);
@@ -156,7 +157,6 @@ nav {
 
 .lang-pill {
   display: flex;
-  gap: 2px;
   background: var(--bg3);
   border-radius: 999px;
   padding: 3px;
@@ -166,8 +166,8 @@ nav {
   background: none;
   border: none;
   color: var(--sub);
-  font-family: 'Gelasio', serif;
-  font-size: 16px;
+  font-family: 'LINE Seed JP', sans-serif;
+  font-size: 14px;
   padding: 3px 10px;
   border-radius: 999px;
   cursor: pointer;
@@ -192,8 +192,8 @@ main {
 }
 
 .hero-avatar {
-  width: 128px;
-  height: 128px;
+  width: 176px;
+  height: 176px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--bg3);
@@ -244,6 +244,13 @@ main {
 .meta-chip i {
   font-size: 14px;
   color: var(--bg4);
+}
+
+.claude-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .status-dot {

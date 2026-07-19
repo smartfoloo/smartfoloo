@@ -32,19 +32,27 @@ function setLang(lang, animate) {
   root.setAttribute('data-lang', lang);
   localStorage.setItem('lang', lang);
   buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-  moveIndicator();
+  moveIndicator(!animate);
 }
 
-function moveIndicator() {
+function moveIndicator(instant) {
   const active = document.querySelector('.lang-btn.active');
   const rect = active.getBoundingClientRect();
   const parent = active.parentElement.getBoundingClientRect();
-  indicator.style.width = rect.width + 'px';
-  indicator.style.transform = `translateX(${rect.left - parent.left}px)`;
+  if (instant) {
+    indicator.style.transition = 'none';
+    indicator.style.width = rect.width + 'px';
+    indicator.style.transform = `translateX(${rect.left - parent.left}px)`;
+    void indicator.offsetWidth;
+    indicator.style.transition = '';
+  } else {
+    indicator.style.width = rect.width + 'px';
+    indicator.style.transform = `translateX(${rect.left - parent.left}px)`;
+  }
 }
 
-window.addEventListener('load', moveIndicator);
-window.addEventListener('resize', moveIndicator);
+window.addEventListener('load', () => moveIndicator(true));
+window.addEventListener('resize', () => moveIndicator(true));
 
 const wipe = document.createElement('div');
 wipe.className = 'page-wipe';
