@@ -1,0 +1,11 @@
+{
+  "name": "smartfoloo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "screenshot-projects": "node scripts/screenshot-projects.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}

@@ -1,0 +1,44 @@
+name: Update project screenshots
+
+on:
+  schedule:
+    # Approximately every 3 days. Cron has no native "every N days" step that
+    # survives month boundaries cleanly, so this pins fixed days-of-month.
+    - cron: "0 3 1,4,7,10,13,16,19,22,25,28 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Take screenshots
+        run: npm run screenshot-projects
+
+      - name: Commit changed screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images/*.png
+          if git diff --cached --quiet; then
+            echo "No screenshot changes."
+          else
+            git commit -m "chore: refresh project screenshots"
+            git push
+          fi
