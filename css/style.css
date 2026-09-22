@@ -283,8 +283,7 @@ section {
   font-family: 'Gelasio', serif;
   font-size: 16px;
   color: var(--bg4);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin-bottom: 20px;
 }
 
@@ -328,8 +327,8 @@ section {
 }
 
 .project-title {
-  font-family: 'Gelasio', serif;
-  font-size: 20px;
+  font-family: 'LINE Seed JP', sans-serif;
+  font-size: 16px;
   color: var(--orange);
   margin-bottom: 10px;
 }
